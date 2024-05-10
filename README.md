@@ -23,4 +23,4 @@ This project is built with the following technologies:
 - TypeScript
 - Firebase
 - React Router
-- [Add any additional technologies used]
+- Tailwind css
