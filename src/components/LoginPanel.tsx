@@ -63,7 +63,7 @@ interface LoginPanelProps {
                 <Link to="/signup" className="underline text-gray-600">
                   Create New Account
                 </Link>
-                <p className='text-center'>Or</p>
+{/*                 <p className='text-center'>Or</p>
                 <button onClick={handleSubmitGoogle} className="cursor-pointer w-2/3 bg-[#4081ED] text-white p-0 m-0">
                   <span className='flex bg-[#4081ED] justify-between items-center p-0 m-0 border h-12 relative'>
                     <span className='bg-white w-1/5 border relative h-[95%] ml-[1px]'>
@@ -71,7 +71,7 @@ interface LoginPanelProps {
                     </span>
                     <p className='w-4/5 py-2'>Sign in with Google</p>
                   </span>
-                </button>
+                </button> */}
               </div>
             </form>
           </div>
