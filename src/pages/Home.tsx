@@ -321,7 +321,7 @@ const handleEditProduct=async(values:Product):Promise<any>=>{
                   <td className="py-4 px-4 text-center">
                     <button
                       className={`relative ${
-                        product.inStock
+                        product?.inStock
                           ? 'bg-green-500 hover:bg-green-600'
                           : 'bg-gray-300 hover:bg-gray-400'
                       } w-14 h-8 rounded-full overflow-hidden`}
