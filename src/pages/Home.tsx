@@ -310,8 +310,8 @@ const handleEditProduct=async(values:Product):Promise<any>=>{
                     console.log('right clickedddd');
                     return
                   }
-                  navigate(`/details/${product.productId}`)
-                }} key={product.productId} className="border-b border-gray-100 boxs2 cursor-pointer relative">
+                  navigate(`/details/${product?.productId}`)
+                }} key={product?.productId} className="border-b border-gray-100 boxs2 cursor-pointer relative">
                   <td className="py-4 px-4 text-center">{i+1}</td>
                   <td className="py-4 px-4 text-left">{product?.title}</td>
                   <td className="py-4 px-4 flex justify-center"><img className='previewImg' src={product?.image} alt="thumbnail"/></td>
