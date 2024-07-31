@@ -6,15 +6,15 @@ const StatsCalculator = (data: Product[]) => {
     console.log(data,'hook')
     if (!data || data?.length === 0) return null;
     let results:any={};
-    const flagshipProducts=data.reduce((acc,curr)=>curr.price>3500?acc+1:acc,0);
-    const outOfStockItems=data.reduce((acc,curr)=>!curr.inStock?acc+1:acc,0);
-    const demandedBrandsCalc=data.reduce((acc:any,curr)=>{
+    const flagshipProducts=data?.reduce((acc,curr)=>curr?.price>3500?acc+1:acc,0);
+    const outOfStockItems=data?.reduce((acc,curr)=>!curr?.inStock?acc+1:acc,0);
+    const demandedBrandsCalc=data?.reduce((acc:any,curr)=>{
         // console.log(acc.brand,typeof acc.brand)
-        if(curr.brand in acc){
-            return {...acc,[curr.brand]:acc[curr.brand]+1}
+        if(curr?.brand in acc){
+            return {...acc,[curr?.brand]:acc[curr?.brand]+1}
         }
         else{
-            return {...acc,[curr.brand]:0}
+            return {...acc,[curr?.brand]:0}
         }
     },{})
     // console.log(demandedBrandsCalc,'demandedBrandsCalc')
