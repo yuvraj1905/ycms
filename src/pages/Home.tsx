@@ -313,11 +313,11 @@ const handleEditProduct=async(values:Product):Promise<any>=>{
                   navigate(`/details/${product.productId}`)
                 }} key={product.productId} className="border-b border-gray-100 boxs2 cursor-pointer relative">
                   <td className="py-4 px-4 text-center">{i+1}</td>
-                  <td className="py-4 px-4 text-left">{product.title}</td>
-                  <td className="py-4 px-4 flex justify-center"><img className='previewImg' src={product.image} alt="thumbnail"/></td>
-                  <td className="py-4 px-4 text-center">{product.productCategory}</td>
-                  <td className="py-4 px-4 text-center">{product.brand}</td>
-                  <td className="py-4 px-4 text-center">{product.price}</td>
+                  <td className="py-4 px-4 text-left">{product?.title}</td>
+                  <td className="py-4 px-4 flex justify-center"><img className='previewImg' src={product?.image} alt="thumbnail"/></td>
+                  <td className="py-4 px-4 text-center">{product?.productCategory}</td>
+                  <td className="py-4 px-4 text-center">{product?.brand}</td>
+                  <td className="py-4 px-4 text-center">{product?.price}</td>
                   <td className="py-4 px-4 text-center">
                     <button
                       className={`relative ${
@@ -327,12 +327,12 @@ const handleEditProduct=async(values:Product):Promise<any>=>{
                       } w-14 h-8 rounded-full overflow-hidden`}
                       onClick={(e) =>{
                         e.stopPropagation();
-                        product.productId&& toggleInStock(product)
+                        product?.productId&& toggleInStock(product)
                       }}
                     >
                       <span
                         className={`absolute left-0 top-0 h-full w-7 bg-white rounded-full shadow transform transition-transform ${
-                          product.inStock ? 'translate-x-full' : 'translate-x-0'
+                          product?.inStock ? 'translate-x-full' : 'translate-x-0'
                         }`}
                       />
                     </button>
@@ -361,7 +361,7 @@ const handleEditProduct=async(values:Product):Promise<any>=>{
           </table>
         </div>
         <div className="flex justify-center mt-8">
-          {Array.from({ length: Math.ceil(filteredProducts.length / productsPerPage) }).map(
+          {Array.from({ length: Math.ceil(filteredProducts?.length / productsPerPage) }).map(
             (_, index) => (
               <button
                 key={index}
